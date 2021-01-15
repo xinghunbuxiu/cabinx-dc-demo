@@ -1,0 +1,3 @@
+<x-page>
+    demo {{text}}
+</x-page>

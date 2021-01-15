@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dmall:dmall-sso-sdk:0.1.5-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dmall/dmall-sso-sdk/0.1.5-SNAPSHOT/dmall-sso-sdk-0.1.5-20201105.064522-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dmall/dmall-sso-sdk/0.1.5-SNAPSHOT/dmall-sso-sdk-0.1.5-20201105.064522-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dmall/dmall-sso-sdk/0.1.5-SNAPSHOT/dmall-sso-sdk-0.1.5-20201105.064522-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

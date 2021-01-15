@@ -1,0 +1,14 @@
+{
+  "name": "cabinx_demo",
+  "version": "1.0.0",
+  "description": "cabinx 项目模板",
+  "scripts": {
+    "dev": "cabin-service-cli dev",
+    "build": "cabin-service-cli build"
+  },
+  "author": "",
+  "dependencies": {
+    "cabin-service-cli": "0.5.411",
+    "cabinx-dynamic-component": "^1.0.1"
+  }
+}

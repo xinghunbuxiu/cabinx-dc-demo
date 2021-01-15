@@ -1,0 +1,95 @@
+
+<page class="demo-box">
+  <actions>
+    <button  bindclick="showPop" text="创建"></button>
+  </actions>
+  <main>
+    <form type="search" confirm-button bindconfirm="search">
+      <item label="姓名" node="input" name="name"></item>
+      <item label="学历" node="select" data="{{educations}}" name="education"></item>
+      <dynamic-component
+        x="dyc"
+        :cabinx-components="cabinxComponents"
+        :base-url="baseUrl"
+      ></dynamic-component>
+    </form>
+    <table
+      x="table"
+      height="300px"
+      pageable="{{ pageSize: 20 }}"
+      ajax="{{ajax}}"
+      @column-changed="tableFilterChange"
+      :columnSettable="columnSettable"
+    >
+      <toolbar
+        data="{[
+          { name: 'export' },
+          { name: 'print' },
+        ]}"
+        bindtool-click="handleToolClick"
+      >
+      </toolbar>
+      <cell label="No." name="rowNO" :visible="true"  fixed="left">
+        {{cellData.rowNO}}
+      </cell>
+      <cell label="日期" name="date" :visible="false">
+        {{cellData.rowData.date}}
+      </cell>
+      <cell label="姓名" name="name" :visible="true">
+        {{cellData.rowData.name}}
+      </cell>
+      <cell label="省/直辖市" name="province" :visible="true">
+        {{cellData.rowData.province}}
+      </cell>
+      <cell label="市区" name="city" :visible="true">
+        {{cellData.rowData.city}}
+      </cell>
+      <cell label="详细地址" name="address" :visible="true">
+        {{cellData.rowData.address}}
+      </cell>
+      <cell label="邮编" name="zip" :visible="false">
+        {{cellData.rowData.zip}}
+      </cell>
+      <cell label="学历" name="education" :visible="false">
+        {{cellData.rowData.education}}
+      </cell>
+      <cell label="职业" name="occupation" :visible="false">
+        {{cellData.rowData.occupation}}
+      </cell>
+      <cell label="操作" fixed="right">
+          <button text="编辑" bindclick="handleEdit(cellData.rowData.name)"></button>
+          <button text="操作" bindclick="handleOper(cellData.rowData.name)"></button>
+          <button text="查看" bindclick="seeDetail(cellData.rowData)"></button>
+      </cell>
+    </table>
+  </main>
+
+  <pop x='demoPop' title="我是标题">
+    <form x="demoForm" layout="vertical" clear-button="{{false}}" confirm-button="{{false}}" bindconfirm="submitForm">
+      <item label="纯文本" name="text1" value="我就是普普通通的纯文件！" />
+      <item node="input" name="name" label="姓名" required />
+      <item node="input" name="class" label="班级"  />
+    </form>
+    <actions>
+      <button bindclick="hidePop" text="取消"></button>
+      <button target="demoForm.confirm" text="确定" status="primary"></button>
+    </actions>
+  </pop>
+
+  <pop x='tablePop' title="我是标题">
+    <form x="tablePopForm" type="info" layout="horizontal" clear-button="{{false}}" confirm-button="{{false}}">
+      <item label="纯文本" name="text1" value="我就是普普通通的纯文件！" />
+      <item node="input" label="姓名" name="name" />
+      <item node="input" label="学历" name="education" />
+      <item node="input" label="市区" name="city" />
+      <item node="input" label="详细地址" name="address" />
+      <item node="input" label="职业" name="occupation" />
+    </form>
+    <actions>
+      <button bindclick="hideTablePop" text="知道了"></button>
+    </actions>
+  </pop>
+    
+  </page>
+  
+  

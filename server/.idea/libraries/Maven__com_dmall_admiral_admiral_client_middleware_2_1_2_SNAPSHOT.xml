@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.dmall.admiral:admiral-client-middleware:2.1.2-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dmall/admiral/admiral-client-middleware/2.1.2-SNAPSHOT/admiral-client-middleware-2.1.2-20201022.115030-19.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dmall/admiral/admiral-client-middleware/2.1.2-SNAPSHOT/admiral-client-middleware-2.1.2-20201022.115030-19-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dmall/admiral/admiral-client-middleware/2.1.2-SNAPSHOT/admiral-client-middleware-2.1.2-20201022.115030-19-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

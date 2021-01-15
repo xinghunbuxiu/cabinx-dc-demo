@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://code.alibabatech.com/schema/dubbo
+ http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="${app.dubbo.application.name}" owner="${app.dubbo.application.owner}" flag="" shared=""/>
+    <dubbo:registry address="${app.dubbo.registry.address}"/>
+    <dubbo:monitor protocol="registry"/>
+
+    <!-- 调用其他系统的接口 -->
+
+    <!-- 基础数据相关的service -->
+    <dubbo:reference id="storeInfoServiceForCache" interface="com.dmall.oop.dubbo.interfaces.cache.StoreInfoServiceForCache" timeout="10000" check="false" />
+
+    <!--获取商家信息-->
+    <dubbo:reference id="venderInfoService" interface="com.dmall.oop.dubbo.interfaces.db.VenderInfoServiceForDB" timeout="10000" check="false"/>
+    <dubbo:reference id="storeGroupServiceClient" interface="com.dmall.oop.dubbo.interfaces.lkclient.StoreGroupServiceClient" timeout="10000" check="false"/>
+
+    <!--获取品牌接口-->
+    <dubbo:reference id="brandClient" interface="com.wm.ware.api.brand.BrandClient" timeout="10000" check="false"/>
+
+    <!--获取商品分类接口-->
+    <dubbo:reference id="wmMcUkeInfoService" interface="com.wm.ware.api.uke.WmMcUkeInfoService" timeout="10000" check="false"/>
+    <dubbo:reference id="wareSkuClient" interface="com.wm.ware.api.ware.WareSkuClient" timeout="10000" check="false"/>
+    <dubbo:reference id="baseStatusClient" interface="com.wm.ware.api.ctg.BaseStatusClient" timeout="10000" check="false"/>
+    <dubbo:reference id="catFrameworkClient" interface="com.wm.ware.api.ctg.CatFrameworkClient" timeout="10000" check="false"/>
+    <dubbo:reference id="catSmallClassifyCacheClient" interface="com.wm.ware.api.ctg.CatSmallClassifyCacheClient" timeout="10000" check="false"/>
+    <dubbo:reference id="shelfGroupClient" interface="com.wm.ware.api.shelfgroup.ShelfGroupClient" timeout="10000" check="false"/>
+    <dubbo:reference id="sapWareSkuClient" interface="com.wm.ware.api.ware.SapWareSkuClient" timeout="10000" check="false"/>
+    <dubbo:reference id="tagSapWareClient" interface="com.wm.ware.api.tag.TagSapWareClient" timeout="10000" check="false"/>
+    <dubbo:reference id="sapWareClient" interface="com.wm.ware.api.yzt.SapWareClient" timeout="10000" check="false"/>
+    <dubbo:reference id="wareClient" interface="com.wm.ware.api.ware.WareClient" timeout="10000" check="false"/>
+
+</beans>

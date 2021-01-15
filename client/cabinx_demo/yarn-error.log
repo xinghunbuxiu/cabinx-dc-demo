@@ -1,0 +1,48 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\Cmder\bin;C:\Program Files\Cmder\vendor\bin;C:\Program Files\Cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Program Files\Cmder\vendor\conemu-maximus5;C:\Program Files\Cmder\vendor\conemu-maximus5\ConEmu;C:\Python27\;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_40\bin;C:\Program Files\Java\jdk1.8.0_40\jre\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\ouiyuio\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\ouiyuio\AppData\Local\Programs\Python\Python38\;C:\Users\ouiyuio\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2020.1.2\bin;C:\Users\ouiyuio\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\WebStorm 2020.1.2\bin;C:\Users\ouiyuio\AppData\Roaming\npm;C:\Users\ouiyuio\AppData\Local\Yarn\bin;C:\Users\ouiyuio\.dotnet\tools;C:\Program Files\maven\3.6.1\bin;C:\Program Files\JetBrains\PyCharm 2020.1.4\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Cmder
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  12.18.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: http://npm.dmall.com/@npmcli%2fmove-file/-/move-file-1.1.0.tgz: Request failed "500 Internal Server Error"
+      at ResponseError.ExtendableBuiltin (C:\Program Files (x86)\Yarn\lib\cli.js:696:66)
+      at new ResponseError (C:\Program Files (x86)\Yarn\lib\cli.js:802:124)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:66167:16)
+      at Request.emit (events.js:315:20)
+      at Request.module.exports.Request.onRequestResponse (C:\Program Files (x86)\Yarn\lib\cli.js:141626:10)
+      at ClientRequest.emit (events.js:315:20)
+      at HTTPParser.parserOnIncomingClient [as onIncoming] (_http_client.js:596:27)
+      at HTTPParser.parserOnHeadersComplete (_http_common.js:119:17)
+      at Socket.socketOnData (_http_client.js:469:22)
+      at Socket.emit (events.js:315:20)
+
+npm manifest: 
+  {
+    "name": "cabinx",
+    "version": "1.0.0",
+    "description": "cabinx 项目模板",
+    "scripts": {
+      "dev": "cabin-service-cli dev",
+      "build": "cabin-service-cli build"
+    },
+    "author": "",
+    "dependencies": {
+      "cabin-service-cli": "0.5.411"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
